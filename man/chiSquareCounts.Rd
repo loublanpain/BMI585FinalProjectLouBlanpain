@@ -2,19 +2,20 @@
 % Please edit documentation in R/homework.R
 \name{chiSquareCounts}
 \alias{chiSquareCounts}
-\title{Title}
+\title{Chi-squared test}
 \usage{
 chiSquareCounts(tib)
 }
 \arguments{
-\item{tib}{}
+\item{tib}{The tibble of counts.}
 }
 \value{
-
+A list containing the table tib, and the result of the Chi-squared test (including X-squared, degrees of freedom df, and p-value of the test).
 }
 \description{
-Title
+Takes in a tibble of counts and returns a list with the tibble, and result of the Chi-squared test.
 }
 \examples{
+chiSquareCounts(as_tibble(cbind(c(21,3),c(14,10))))
 
 }

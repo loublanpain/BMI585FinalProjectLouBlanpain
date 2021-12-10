@@ -2,19 +2,27 @@
 % Please edit documentation in R/classifierTesting.R
 \name{ppv}
 \alias{ppv}
-\title{Title}
+\title{Estimating positive predictive value}
 \usage{
 ppv(pred, truth)
 }
 \arguments{
-\item{truth}{}
+\item{pred}{A logical (T=positive, F=negative) or numeric (1=positive, 0=negative) vector of positives and negatives provided by the classifier.}
+
+\item{truth}{A logical (T=positive, F=negative) or numeric (1=positive, 0=negative) vector of positives and negatives measured.}
 }
 \value{
-
+A value from 0 (low PPV) to 1 (high PPV).
 }
 \description{
-Title
+Computes the Positive Predictive Value (PPV) or precision of a classifier, by using recorded data vs data predicted by a classifier.
+}
+\details{
+Equation used is # True Positives / (# True Positives + # False Positives).
 }
 \examples{
+pred_values=sample(c(0,1),replace=T,size=100)
+true_values=sample(c(0,1),replace=T,size=100)
+ppv(pred_values,true_values)
 
 }

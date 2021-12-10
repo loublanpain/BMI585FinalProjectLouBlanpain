@@ -2,19 +2,27 @@
 % Please edit documentation in R/homework.R
 \name{boxMuller}
 \alias{boxMuller}
-\title{Title}
+\title{The Box-Muller transformation}
 \usage{
-boxMuller(n)
+boxMuller(n = 1)
 }
 \arguments{
-\item{n}{}
+\item{n}{The number of samples to be returned.}
 }
 \value{
-
+A vector of samples from the standard normal distribution.
 }
 \description{
-Title
+Takes two samples from the uniform distribution on the interval [0,1] and maps them to two standard, normally distributed samples.
+}
+\details{
+Uses the following equations to generate the two standard, normally distributed samples:
+
+\eqn{X1=\sqrt{−2log(U_1)}cos(2\pi U_2)}
+
+\eqn{X2=\sqrt{−2log(U_1)}sin(2\pi U_2)}
 }
 \examples{
+boxMuller(500)
 
 }

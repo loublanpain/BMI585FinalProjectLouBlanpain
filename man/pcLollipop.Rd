@@ -2,19 +2,25 @@
 % Please edit documentation in R/dimensionality.R
 \name{pcLollipop}
 \alias{pcLollipop}
-\title{Title}
+\title{Lollipop plotting}
 \usage{
 pcLollipop(x)
 }
 \arguments{
-\item{x}{}
+\item{x}{The data frame or tibble containing the dataset.}
 }
 \value{
-
+A list of (up to 5) plots (from ggplot2) objects; each plot is a lollipop plot of the loadings of each of the (up to 5) principal components for each variable. Morover, running this function will also display the plots in a 1-column grid.
 }
 \description{
-Title
+Creates a set of lollipop plots for up to the first 5 principal components of a dataset.
+}
+\details{
+(some code taken from https://www.r-graph-gallery.com/300-basic-lollipop-plot.html)
 }
 \examples{
+data=read.csv('https://jlucasmckay.bmi.emory.edu/global/bmi585/heart.csv')
+data=data[,c('Age','RestBP','Chol','MaxHR','Oldpeak')]
+plots=pcLollipop(data)
 
 }

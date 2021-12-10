@@ -2,19 +2,22 @@
 % Please edit documentation in R/homework.R
 \name{twoSidedT}
 \alias{twoSidedT}
-\title{Title}
+\title{Conversion of test statistic to t-density}
 \usage{
 twoSidedT(t, n)
 }
 \arguments{
-\item{n}{}
+\item{t}{The test statistic.}
+
+\item{n}{The number of degrees of freedom.}
 }
 \value{
-
+The area under the t-density for values >=|x|.
 }
 \description{
-Title
+Converts a test statistic x to the area under the t-density for values >=|x|.
 }
 \examples{
+twoSidedT(3,8)
 
 }

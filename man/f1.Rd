@@ -2,19 +2,27 @@
 % Please edit documentation in R/classifierTesting.R
 \name{f1}
 \alias{f1}
-\title{Title}
+\title{Estimating F1 score}
 \usage{
 f1(pred, truth)
 }
 \arguments{
-\item{truth}{}
+\item{pred}{A logical (T=positive, F=negative) or numeric (1=positive, 0=negative) vector of positives and negatives provided by the classifier.}
+
+\item{truth}{A logical (T=positive, F=negative) or numeric (1=positive, 0=negative) vector of positives and negatives measured.}
 }
 \value{
-
+A value from 0 (low F1 score) to 1 (high F1 score).
 }
 \description{
-Title
+Computes the F1 score of a classifier, by using recorded data vs data predicted by a classifier.
+}
+\details{
+Equation used is 2 x (precision x recall) / (precision + recall). Precision is calculated using function PPV, while recall is calculated using     function Sensitivity.
 }
 \examples{
+pred_values=sample(c(0,1),replace=T,size=100)
+true_values=sample(c(0,1),replace=T,size=100)
+f1(pred_values,true_values)
 
 }

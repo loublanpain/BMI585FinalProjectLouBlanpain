@@ -2,19 +2,24 @@
 % Please edit documentation in R/dimensionality.R
 \name{pcApprox}
 \alias{pcApprox}
-\title{Title}
+\title{Approximating data with principal components}
 \usage{
 pcApprox(x, npc)
 }
 \arguments{
-\item{x}{}
+\item{x}{A tibble or data frame containing the data to be approximated.}
+
+\item{npc}{The numbers of first principal components to use when approximating the data.}
 }
 \value{
-
+Approximated data with the first npc principal components.
 }
 \description{
-Title
+Takes in a tibble or data frame of observations (rows) of several numeric variables (columns), and return an approximation of the data using a given number of first principal components.
 }
 \examples{
+data=read.csv('https://jlucasmckay.bmi.emory.edu/global/bmi585/heart.csv')
+data=data[,c('Age','RestBP','Chol','MaxHR','Oldpeak')]
+pcApprox(data,3)
 
 }

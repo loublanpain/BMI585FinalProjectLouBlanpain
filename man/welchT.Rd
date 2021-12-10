@@ -2,19 +2,24 @@
 % Please edit documentation in R/homework.R
 \name{welchT}
 \alias{welchT}
-\title{Title}
+\title{Welch t-test}
 \usage{
 welchT(x, y)
 }
 \arguments{
-\item{y}{}
+\item{x}{A numeric vector from first sample.}
+
+\item{y}{A numeric vector from second sample.}
 }
 \value{
-
+A list of named variables 't', 'df' and 'p', corresponding to t-statistic, degrees of freedom, and associated p-value, respectively.
 }
 \description{
-Title
+Calculates t-statistic, degrees of freedom and associated p-value, for two samples. Uses the satterwaithe approximation for cases where the number of samples in the two vectors differ.
 }
 \examples{
+x=rnorm(30)+1
+y=rnorm(35)+3
+welchT(x,y)
 
 }

@@ -2,19 +2,22 @@
 % Please edit documentation in R/homework.R
 \name{fdrAdjust}
 \alias{fdrAdjust}
-\title{Title}
+\title{p-value threhsolding with false discovery rate correction}
 \usage{
 fdrAdjust(p)
 }
 \arguments{
-\item{p}{}
+\item{p}{A numeric vector of p-values from an analysis.}
 }
 \value{
-
+A logical vector indicating whether or not each of the p-values satisfy an alpha of 0.05, following FDR correction (0 is no, 1 is yes).
 }
 \description{
-Title
+Adjusts a set of p-values using the false discovery rate (FDR) correction, and returns a logical vector indicating whether each corresponding adjusted p-value is below 0.05 (alpha of 0.05).
 }
 \examples{
+p=seq(0.0025,0.0250,0.0025)
+names(p)=paste('Test',LETTERS[seq(1,length(p))])
+fdrAdjust(p)
 
 }

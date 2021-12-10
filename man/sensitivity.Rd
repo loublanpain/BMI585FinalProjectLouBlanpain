@@ -2,19 +2,27 @@
 % Please edit documentation in R/classifierTesting.R
 \name{sensitivity}
 \alias{sensitivity}
-\title{Title}
+\title{Estimating sensitivity}
 \usage{
 sensitivity(pred, truth)
 }
 \arguments{
-\item{truth}{}
+\item{pred}{A logical (T=positive, F=negative) or numeric (1=positive, 0=negative) vector of positives and negatives provided by the classifier.}
+
+\item{truth}{A logical (T=positive, F=negative) or numeric (1=positive, 0=negative) vector of positives and negatives measured.}
 }
 \value{
-
+A value from 0 (low sensitivity) to 1 (high sensitivity).
 }
 \description{
-Title
+Computes the sensitivity or recall of a classifier, by using measured data vs data predicted by a classifier.
+}
+\details{
+Equation used is # True Positives / # All Positives.
 }
 \examples{
+pred_values=sample(c(0,1),replace=T,size=100)
+true_values=sample(c(0,1),replace=T,size=100)
+sensitivity(pred_values,true_values)
 
 }

@@ -2,19 +2,24 @@
 % Please edit documentation in R/homework.R
 \name{postHocPower}
 \alias{postHocPower}
-\title{Title}
+\title{Map Cohen's d and sample size to power}
 \usage{
 postHocPower(d, n1, n2)
 }
 \arguments{
-\item{n2}{}
+\item{d}{The effect size measured or Cohen's d}
+
+\item{n1}{Sample size from first group.}
+
+\item{n2}{Sample size from second group.}
 }
 \value{
-
+A decimal number between 0 and 1, indicating the power of the analysis.
 }
 \description{
-Title
+This takes in a measured effect size or Cohen's d, and total sample size used, and returns the power of the analysis, in decimal value (i.e. 0.7 would be 70\% power).
 }
 \examples{
+postHocPower(0.6,20,25)
 
 }

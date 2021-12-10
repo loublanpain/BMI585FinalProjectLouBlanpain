@@ -2,19 +2,27 @@
 % Please edit documentation in R/classifierTesting.R
 \name{specificity}
 \alias{specificity}
-\title{Title}
+\title{Estimating specificity}
 \usage{
 specificity(pred, truth)
 }
 \arguments{
-\item{truth}{}
+\item{pred}{A logical (T=positive, F=negative) or numeric (1=positive, 0=negative) vector of positives and negatives provided by the classifier.}
+
+\item{truth}{A logical (T=positive, F=negative) or numeric (1=positive, 0=negative) vector of positives and negatives measured.}
 }
 \value{
-
+A value from 0 (low specificity) to 1 (high specificity).
 }
 \description{
-Title
+Computes the specificity of a classifier, by using recorded data vs data predicted by a classifier.
+}
+\details{
+Equation used is # True Negatives / # All Negatives.
 }
 \examples{
+pred_values=sample(c(0,1),replace=T,size=100)
+true_values=sample(c(0,1),replace=T,size=100)
+specificity(pred_values,true_values)
 
 }

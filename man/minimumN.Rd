@@ -2,19 +2,20 @@
 % Please edit documentation in R/homework.R
 \name{minimumN}
 \alias{minimumN}
-\title{Title}
+\title{Map effect size to minimum sample size}
 \usage{
 minimumN(d)
 }
 \arguments{
-\item{d}{}
+\item{d}{The assumed effect size (or Cohen's d).}
 }
 \value{
-
+The minimum sample size required to show the assumed Cohen's d, with power of 0.80.
 }
 \description{
-Title
+Given a power of 80\%, calculates the minimum sample size required to uncover an assumed effect size or Cohen's d value.
 }
 \examples{
+minimumN(0.6)
 
 }

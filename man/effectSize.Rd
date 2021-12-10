@@ -2,19 +2,24 @@
 % Please edit documentation in R/homework.R
 \name{effectSize}
 \alias{effectSize}
-\title{Title}
+\title{Effect size calculation}
 \usage{
 effectSize(x, q)
 }
 \arguments{
-\item{q}{}
+\item{x}{A numeric vector of a variable.}
+
+\item{q}{A corresponding logical vector (0 or 1) indicating whether each of the elements of vector x belongs to group 0 or 1.}
 }
 \value{
-
+The effect size of the varible between the two groups.
 }
 \description{
-Title
+Calculates the effect size (Cohen's d) for a variable with two groups.
 }
 \examples{
+x=c(runif(10,5,6),runif(10,7,8))
+q=c(rep(0,10),rep(1,10))
+effectSize(x,q)
 
 }

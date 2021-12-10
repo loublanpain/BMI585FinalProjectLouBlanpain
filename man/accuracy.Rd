@@ -2,19 +2,27 @@
 % Please edit documentation in R/classifierTesting.R
 \name{accuracy}
 \alias{accuracy}
-\title{Title}
+\title{Estimating accuracy}
 \usage{
 accuracy(pred, truth)
 }
 \arguments{
-\item{truth}{}
+\item{pred}{A logical (T=positive, F=negative) or numeric (1=positive, 0=negative) vector of positives and negatives provided by the classifier.}
+
+\item{truth}{A logical (T=positive, F=negative) or numeric (1=positive, 0=negative) vector of positives and negatives measured.}
 }
 \value{
-
+A value from 0 (low accuracy) to 1 (high accuracy).
 }
 \description{
-Title
+Computes the accuracy of a classifier, by using recorded data vs data predicted by a classifier.
+}
+\details{
+Equation used is (# True Positives + # True Negatives) / (# All Positives + # All Negatives).
 }
 \examples{
+pred_values=sample(c(0,1),replace=T,size=100)
+true_values=sample(c(0,1),replace=T,size=100)
+accuracy(pred_values,true_values)
 
 }

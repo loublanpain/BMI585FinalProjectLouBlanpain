@@ -2,19 +2,20 @@
 % Please edit documentation in R/homework.R
 \name{twoSidedZ}
 \alias{twoSidedZ}
-\title{Title}
+\title{Conversion of test statistic to z-density}
 \usage{
 twoSidedZ(z)
 }
 \arguments{
-\item{z}{}
+\item{z}{The test statistic.}
 }
 \value{
-
+The area under the z-density for values >=|x|.
 }
 \description{
-Title
+Converts a test statistic z to the area under the z-density for values >=|x|.
 }
 \examples{
+twoSidedZ(3)
 
 }

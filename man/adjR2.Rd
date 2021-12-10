@@ -2,19 +2,26 @@
 % Please edit documentation in R/homework.R
 \name{adjR2}
 \alias{adjR2}
-\title{Title}
+\title{Adjusted R-squared calculation}
 \usage{
-adjR2(pred, truth)
+adjR2(pred, truth, d)
 }
 \arguments{
-\item{truth}{}
+\item{pred}{A numeric vector of variable values predicted by the model.}
+
+\item{truth}{A numeric vector of variable values measured.}
+
+\item{d}{The number of parameters used.}
 }
 \value{
 
 }
 \description{
-Title
+Calculates the adjusted R-squared for a given model, i.e. the measure of the model fit, adjusted for the number of parameters used.
 }
 \examples{
+data=read.csv('https://jlucasmckay.bmi.emory.edu/global/bmi585/credit.csv')
+lim_inccards=lm(Limit~Income+Cards,data)
+R_squared_calc(data$Limit,lim_inccards$fitted.values,2)
 
 }
